@@ -2,9 +2,13 @@ package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity(name = "franchise")
 @Table(name = "franchise")
 public class Franchise {
+
+
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
@@ -26,6 +30,13 @@ public class Franchise {
             columnDefinition = "TEXT")
 
     private String description;
+
+    @OneToMany(mappedBy = "franchise")
+    private List<Movie> movies;
+
+
+
+
 
     public Franchise(Integer id, String name, String description) {
         this.id = id;
