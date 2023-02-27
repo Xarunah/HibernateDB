@@ -2,6 +2,8 @@ package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity(name = "Movie")
@@ -12,7 +14,7 @@ public class Movie {
             strategy = GenerationType.IDENTITY
     )
     @Column(
-            name = "id",
+            name = "movie_id",
             updatable = false
     )
     private Long id;
@@ -37,7 +39,7 @@ public class Movie {
 
     private String Director;
 
-    @Column(name = "picture",
+    @Column(name = "movie_picture",
             nullable = false,
             columnDefinition = "TEXT")
 
@@ -49,8 +51,8 @@ public class Movie {
     private String trailer;
 
     @ManyToMany
-
-    private Character character;
+    @JoinColumn(name = "character_id")
+    private List<Character> characters;
 
     public Movie(Long id, String title, String genre, Integer realise, String director, String picture, String trailer) {
         this.id = id;
@@ -61,7 +63,7 @@ public class Movie {
         this.picture = picture;
         this.trailer = trailer;
     }
-
+// defhjerigtrlohrplh
     public Movie() {
 
     }

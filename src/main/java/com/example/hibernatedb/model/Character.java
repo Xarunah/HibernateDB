@@ -2,6 +2,8 @@ package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity (name = "Character")
 public class Character {
     @Id
@@ -20,8 +22,10 @@ public class Character {
 
     @Column(name = "character_picture")
     private String picture;
+
     @ManyToMany
-    private Moive movie;
+    @JoinColumn(name = "movie_id")
+    private List<Movie> movies;
 
     public Character(int id, String name, String alias, Gender gender, String picture) {
         this.id = id;
