@@ -135,7 +135,9 @@ public class Movie {
                 ", picture='" + picture + '\'' +
                 ", trailer='" + trailer + '\'' +
                 '}';
+
     }
+
 }
 
 
