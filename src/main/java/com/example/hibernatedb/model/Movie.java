@@ -63,7 +63,7 @@ public class Movie {
         this.picture = picture;
         this.trailer = trailer;
     }
-
+// defhjerigtrlohrplh
     public Movie() {
 
     }
