@@ -20,6 +20,8 @@ public class Character {
 
     @Column(name = "character_picture")
     private String picture;
+    @ManyToMany
+    private Moive movie;
 
     public Character(int id, String name, String alias, Gender gender, String picture) {
         this.id = id;
