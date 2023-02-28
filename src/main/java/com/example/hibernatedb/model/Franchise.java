@@ -18,7 +18,6 @@ public class Franchise {
             name = "franchise_id",
             updatable = false
     )
-
     private Integer id;
 
     @Column(name = "name",
@@ -29,7 +28,6 @@ public class Franchise {
     @Column(name = "description",
             nullable = false,
             columnDefinition = "TEXT")
-
     private String description;
 
     //this map one franchise to many movie
