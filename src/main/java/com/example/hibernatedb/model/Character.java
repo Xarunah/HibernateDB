@@ -23,6 +23,9 @@ public class Character {
     @Column(name = "character_picture")
     private String picture;
 
+
+
+    //this means a character can also apear in multiple movies
     @ManyToMany
     @JoinColumn(name = "movie_id")
     private List<Movie> movies;

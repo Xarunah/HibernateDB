@@ -31,8 +31,9 @@ public class Franchise {
 
     private String description;
 
-    @OneToMany(mappedBy = "franchise")
-    private List<Movie> movies;
+    //this map one franchise to many movie
+   @OneToMany(mappedBy = "franchise")
+   private List<Movie> movies;
 
 
 

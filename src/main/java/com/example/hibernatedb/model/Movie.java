@@ -50,9 +50,15 @@ public class Movie {
             columnDefinition = "TEXT")
     private String trailer;
 
+    //this means that multiple movie can have many characters
     @ManyToMany
-    @JoinColumn(name = "character_id")
     private List<Character> characters;
+
+
+    //this map many movie to one franchise
+    @ManyToOne
+    @JoinColumn(name = "franchise_id")
+    private Franchise franchise;
 
     public Movie(Long id, String title, String genre, Integer realise, String director, String picture, String trailer) {
         this.id = id;
@@ -63,7 +69,8 @@ public class Movie {
         this.picture = picture;
         this.trailer = trailer;
     }
-// defhjerigtrlohrplh
+
+
     public Movie() {
 
     }
