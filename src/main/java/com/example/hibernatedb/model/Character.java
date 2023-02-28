@@ -82,6 +82,18 @@ public class Character {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", alias='" + alias + '\'' +
+                ", gender=" + gender +
+                ", picture='" + picture + '\'' +
+                ", movies=" + movies +
+                '}';
+    }
 }
 
 
