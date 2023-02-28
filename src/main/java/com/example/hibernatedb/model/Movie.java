@@ -62,8 +62,7 @@ public class Movie {
     @JoinColumn(name = "franchise_id")
     private Franchise franchise;
 
-    public Movie(Long id, String title, String genre, Integer realise, String director, String picture, String trailer) {
-        this.id = id;
+    public Movie( String title, String genre, Integer realise, String director, String picture, String trailer) {
         this.title = title;
         this.genre = genre;
         this.realise = realise;
@@ -71,7 +70,6 @@ public class Movie {
         this.picture = picture;
         this.trailer = trailer;
     }
-
 
     public Movie() {
 

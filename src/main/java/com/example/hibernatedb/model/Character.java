@@ -94,6 +94,9 @@ public class Character {
                 ", movies=" + movies +
                 '}';
     }
+
+    public void setMovie(Movie movie) {
+    }
 }
 
 
