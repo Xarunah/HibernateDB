@@ -24,12 +24,14 @@ public class Character {
     @Column(name = "character_picture")
     private String picture;
 
-
-
     //this means a character can also appear in multiple movies
     @ManyToMany
     @JoinColumn(name = "movie_id")
     private Set<Movie> movies;
+
+    public Character() {
+
+    }
 
     public Character(int id, String name, String alias, Gender gender, String picture) {
         this.id = id;
@@ -37,10 +39,6 @@ public class Character {
         this.alias = alias;
         this.gender = gender;
         this.picture = picture;
-    }
-
-    public Character() {
-
     }
 
     public int getId() {
