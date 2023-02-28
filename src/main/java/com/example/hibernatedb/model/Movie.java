@@ -1,8 +1,10 @@
 package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
+import jakarta.persistence.metamodel.SetAttribute;
 
 import java.util.List;
+import java.util.Set;
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
 
@@ -51,8 +53,8 @@ public class Movie {
     private String trailer;
 
     //this means that multiple movie can have many characters
-    @ManyToMany
-    private List<Character> characters;
+    @ManyToMany(mappedBy = "movies")
+    private Set<Character> characters;
 
 
     //this map many movie to one franchise

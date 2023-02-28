@@ -3,6 +3,7 @@ package com.example.hibernatedb.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity(name = "franchise")
 @Table(name = "franchise")
@@ -33,7 +34,7 @@ public class Franchise {
 
     //this map one franchise to many movie
    @OneToMany(mappedBy = "franchise")
-   private List<Movie> movies;
+   private Set<Movie> movies;
 
 
 

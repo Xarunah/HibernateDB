@@ -3,6 +3,7 @@ package com.example.hibernatedb.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity (name = "Character")
 public class Character {
@@ -25,10 +26,10 @@ public class Character {
 
 
 
-    //this means a character can also apear in multiple movies
+    //this means a character can also appear in multiple movies
     @ManyToMany
     @JoinColumn(name = "movie_id")
-    private List<Movie> movies;
+    private Set<Movie> movies;
 
     public Character(int id, String name, String alias, Gender gender, String picture) {
         this.id = id;
