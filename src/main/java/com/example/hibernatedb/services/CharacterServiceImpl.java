@@ -52,5 +52,10 @@ import java.util.Collection;
     public void setMovie(int character_id, int movie_id) {
 
     }
+
+    @Override
+    public void setCharacter(int character_id, int movie_id) {
+
+    }
 }
 

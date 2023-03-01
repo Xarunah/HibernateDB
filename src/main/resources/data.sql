@@ -22,3 +22,5 @@ VALUES (default, 'Bob', 'fgrgreg', 'male', 'https://upload.wikimedia.org/wikiped
 
 INSERT INTO character_movies (character_id, movie_id)
 VALUES (1,1)
+
+
