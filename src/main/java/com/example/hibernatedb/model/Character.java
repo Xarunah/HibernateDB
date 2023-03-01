@@ -1,14 +1,15 @@
 package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
+import lombok.Data;
 import java.util.Set;
 
+@Data
 @Entity (name = "Character")
+@Table(name = "Character")
 public class Character {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "character_id")
     private int id;
 
@@ -35,67 +36,9 @@ public class Character {
     )
     private Set<Movie> movies;
 
-    public Character(String name, String alias, String gender, String picture, Set<Movie> movies) {
-        this.name = name;
-        this.alias = alias;
-        this.gender = gender;
-        this.picture = picture;
-        this.movies = movies;
-    }
 
     public Character() {
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
-    public Set<Movie> getMovies() {
-        return movies;
-    }
-
-    public void setMovies(Set<Movie> movies) {
-        this.movies = movies;
-    }
-
-    public void setMovie(Movie movie) {
     }
 
     @Override

@@ -13,7 +13,7 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 public class Movie {
     @Id
     @GeneratedValue(
-            strategy = GenerationType.IDENTITY
+            strategy = GenerationType.AUTO
     )
     @Column(
             name = "movie_id",
