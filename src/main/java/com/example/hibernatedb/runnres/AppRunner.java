@@ -22,17 +22,6 @@ public class AppRunner implements ApplicationRunner{
     public void run(ApplicationArguments args) throws Exception{
 
     }
-//    public void add() {
-//        Movie newMovie = new Movie("Spider-Man: No Way Home", "Action", 2021, "Jon Watts", "https://www.nordborgbio.dk/wp-content/uploads/2022/01/Spiderman-No-Way-Home.jpg",
-//                "https://www.youtube.com/watch?v=JfVOs4VSpmA");
-//        movieRepository.save(newMovie);
-//    }
-//
-//    public void update() {
-//        Character character = characterRepository.findById(1).get();
-//        Movie movie = movieRepository.findById(1).get();
-//        character.setMovie(movie);
-//        characterRepository.save(character);
-//    }
+
 
 }
