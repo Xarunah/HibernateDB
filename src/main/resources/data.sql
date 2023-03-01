@@ -17,3 +17,8 @@ VALUES (default , 'RyanCoogler', 'Action', 'www.picture3.com', 2022, 'BlackPanth
 INSERT INTO character(character_id, character_name, alias, gender, character_picture)
 VALUES (default, 'Peter Parker', 'Spider-Man', 'male', 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Tom_Holland_as_Spider-Man.jpg/220px-Tom_Holland_as_Spider-Man.jpg');
 
+INSERT INTO character(character_id, character_name, alias, gender, character_picture)
+VALUES (default, 'Bob', 'fgrgreg', 'male', 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Tom_Holland_as_Spider-Man.jpg/220px-Tom_Holland_as_Spider-Man.jpg');
+
+INSERT INTO character_movies (character_id, movie_id)
+VALUES (1,1)

@@ -18,25 +18,29 @@ public class Character {
     @Column(length = 30)
     private String alias;
 
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+
+    private String gender;
 
     @Column(name = "character_picture")
     private String picture;
 
-
-
     //this means a character can also appear in multiple movies
+//    @ManyToMany
+//    @JoinColumn(name = "movie_id")
     @ManyToMany
-    @JoinColumn(name = "movie_id")
+    @JoinTable(
+            name = "character_movies",
+            joinColumns = {@JoinColumn(name = "character_id")},
+            inverseJoinColumns = {@JoinColumn(name = "movie_id")}
+    )
     private Set<Movie> movies;
 
-    public Character(int id, String name, String alias, Gender gender, String picture) {
-        this.id = id;
+    public Character(String name, String alias, String gender, String picture, Set<Movie> movies) {
         this.name = name;
         this.alias = alias;
         this.gender = gender;
         this.picture = picture;
+        this.movies = movies;
     }
 
     public Character() {
@@ -67,11 +71,11 @@ public class Character {
         this.alias = alias;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -83,19 +87,27 @@ public class Character {
         this.picture = picture;
     }
 
+    public Set<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(Set<Movie> movies) {
+        this.movies = movies;
+    }
+
+    public void setMovie(Movie movie) {
+    }
+
     @Override
     public String toString() {
         return "Character{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", alias='" + alias + '\'' +
-                ", gender=" + gender +
+                ", gender='" + gender + '\'' +
                 ", picture='" + picture + '\'' +
                 ", movies=" + movies +
                 '}';
-    }
-
-    public void setMovie(Movie movie) {
     }
 }
 

@@ -39,7 +39,7 @@ public class Movie {
             nullable = false,
             columnDefinition = "TEXT")
 
-    private String Director;
+    private String director;
 
     @Column(name = "movie_picture",
             nullable = false,
@@ -66,7 +66,7 @@ public class Movie {
         this.title = title;
         this.genre = genre;
         this.realise = realise;
-        Director = director;
+        this.director = director;
         this.picture = picture;
         this.trailer = trailer;
     }
@@ -108,11 +108,11 @@ public class Movie {
     }
 
     public String getDirector() {
-        return Director;
+        return director;
     }
 
     public void setDirector(String director) {
-        Director = director;
+        director = director;
     }
 
     public String getPicture() {
@@ -138,7 +138,7 @@ public class Movie {
                 ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
                 ", realise=" + realise +
-                ", Director='" + Director + '\'' +
+                ", Director='" + director + '\'' +
                 ", picture='" + picture + '\'' +
                 ", trailer='" + trailer + '\'' +
                 '}';
