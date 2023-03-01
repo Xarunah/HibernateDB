@@ -1,4 +1,7 @@
 package com.example.hibernatedb.services;
 
-public interface FranchiseService {
+import com.example.hibernatedb.model.Franchise;
+
+public interface FranchiseService extends CrudService<Franchise, Integer> {
+
 }
