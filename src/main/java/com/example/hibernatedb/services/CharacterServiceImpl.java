@@ -39,7 +39,7 @@ public class CharacterServiceImpl implements CharacterService {
 
     @Override
     public void deleteCharacter(String characterId) {
-        characterRepository.deleteCharacterById(Integer.parseInt(characterId));
+        characterRepository.deleteById(Integer.parseInt(characterId));
     }
 
     @Override
@@ -50,6 +50,7 @@ public class CharacterServiceImpl implements CharacterService {
             throw new HttpServerErrorException(HttpStatus.NOT_FOUND, "Character not found.");
         }
         Character character1 = MAPPER.updatedCharacter(characterDTO, character.get());
+        character1.setId(Integer.parseInt(characterId));
         Character udpatedCharacter = characterRepository.save(character1);
         return MAPPER.toCharacterDTO(udpatedCharacter);
     }

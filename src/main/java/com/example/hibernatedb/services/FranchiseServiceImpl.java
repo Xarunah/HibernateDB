@@ -49,6 +49,7 @@ public class FranchiseServiceImpl implements FranchiseService {
             throw new HttpServerErrorException(HttpStatus.NOT_FOUND, "Franchise not found.");
         }
         Franchise franchise1 = MAPPER.updatedFranchise(franchiseDTO, franchise.get());
+        franchise1.setId(Integer.parseInt(franchiseId));
         Franchise udpatedFranchise = franchiseRepository.save(franchise1);
         return MAPPER.convert(udpatedFranchise);
     }

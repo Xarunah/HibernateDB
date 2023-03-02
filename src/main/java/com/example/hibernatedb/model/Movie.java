@@ -14,7 +14,7 @@ import java.util.*;
 public class Movie {
     @Id
     @GeneratedValue(
-            strategy = GenerationType.AUTO
+            strategy = GenerationType.SEQUENCE
     )
     @Column(
             name = "movie_id",

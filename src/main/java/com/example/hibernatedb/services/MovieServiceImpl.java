@@ -46,8 +46,9 @@ public class MovieServiceImpl implements MovieService {
         if (movie.isEmpty()) {
             throw new HttpServerErrorException(HttpStatus.NOT_FOUND, "Movie not found.");
         }
-        Movie character1 = MAPPER.update(movieDTO, movie.get());
-        Movie updatedMovie = movieRepository.save(character1);
+        Movie movie1 = MAPPER.update(movieDTO, movie.get());
+        movie1.setId(Long.parseLong(movieId));
+        Movie updatedMovie = movieRepository.save(movie1);
         return MAPPER.convert(updatedMovie);
     }
 }
