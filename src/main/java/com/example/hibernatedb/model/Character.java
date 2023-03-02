@@ -1,14 +1,16 @@
 package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
-
-import java.util.List;
+import lombok.*;
 import java.util.Set;
 
+@Data
+@NoArgsConstructor
 @Entity (name = "Character")
+@Table(name = "Character")
 public class Character {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "character_id")
     private int id;
 
@@ -35,12 +37,6 @@ public class Character {
     )
     private Set<Movie> movies;
 
-    public Character(String name, String alias, String gender, String picture, Set<Movie> movies) {
-        this.name = name;
-        this.alias = alias;
-        this.gender = gender;
-        this.picture = picture;
-        this.movies = movies;
     }
 
     public Character() {
