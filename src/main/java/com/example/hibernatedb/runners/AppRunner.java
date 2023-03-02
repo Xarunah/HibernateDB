@@ -1,4 +1,4 @@
-package com.example.hibernatedb.runnres;
+package com.example.hibernatedb.runners;
 import com.example.hibernatedb.model.Character;
 import com.example.hibernatedb.model.Movie;
 import com.example.hibernatedb.services.CharacterService;
