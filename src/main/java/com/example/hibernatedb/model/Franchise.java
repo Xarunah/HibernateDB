@@ -35,9 +35,6 @@ public class Franchise {
    private Set<Movie> movies;
 
 
-
-
-
     public Franchise(Integer id, String name, String description) {
         this.id = id;
         this.name = name;

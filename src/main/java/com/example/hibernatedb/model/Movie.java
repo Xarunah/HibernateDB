@@ -145,6 +145,13 @@ public class Movie {
 
     }
 
+    public Set<Character> getCharacter() {
+        return characters;
+    }
+
+    public Movie get() {
+        return null;
+    }
 }
 
 

@@ -109,6 +109,10 @@ public class Character {
                 ", movies=" + movies +
                 '}';
     }
+
+    public java.lang.Character get() {
+        return null;
+    }
 }
 
 
