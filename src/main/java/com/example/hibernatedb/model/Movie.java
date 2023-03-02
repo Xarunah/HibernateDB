@@ -56,7 +56,7 @@ public class Movie {
     //this means that multiple movie can have many characters
     @ManyToMany(mappedBy = "movies")
     @JsonIgnore
-    List<Character> characters;
+    Set<Character> characters;
     //private Set<Character> characters;
 
 
