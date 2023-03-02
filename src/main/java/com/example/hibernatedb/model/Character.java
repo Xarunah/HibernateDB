@@ -1,10 +1,11 @@
 package com.example.hibernatedb.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import java.util.Set;
 
 @Data
+@NoArgsConstructor
 @Entity (name = "Character")
 @Table(name = "Character")
 public class Character {
@@ -36,23 +37,7 @@ public class Character {
     )
     private Set<Movie> movies;
 
-
-    public Character() {
-
     }
-
-    @Override
-    public String toString() {
-        return "Character{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", alias='" + alias + '\'' +
-                ", gender='" + gender + '\'' +
-                ", picture='" + picture + '\'' +
-                ", movies=" + movies +
-                '}';
-    }
-}
 
 
 

@@ -1,15 +1,16 @@
 package com.example.hibernatedb.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.persistence.metamodel.SetAttribute;
+import lombok.*;
+import java.util.*;
 
-import java.util.List;
-import java.util.Set;
-
-import static jakarta.persistence.GenerationType.SEQUENCE;
-
+@Data
+@NoArgsConstructor
 @Entity(name = "Movie")
 @Table(name = "movie")
+@Getter
+@Setter
 public class Movie {
     @Id
     @GeneratedValue(
@@ -54,7 +55,9 @@ public class Movie {
 
     //this means that multiple movie can have many characters
     @ManyToMany(mappedBy = "movies")
-    private Set<Character> characters;
+    @JsonIgnore
+    List<Character> characters;
+    //private Set<Character> characters;
 
 
     //this map many movie to one franchise
@@ -62,89 +65,8 @@ public class Movie {
     @JoinColumn(name = "franchise_id")
     private Franchise franchise;
 
-    public Movie( String title, String genre, Integer realise, String director, String picture, String trailer) {
-        this.title = title;
-        this.genre = genre;
-        this.realise = realise;
-        this.director = director;
-        this.picture = picture;
-        this.trailer = trailer;
-    }
-
-    public Movie() {
 
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public Integer getRealise() {
-        return realise;
-    }
-
-    public void setRealise(Integer realise) {
-        this.realise = realise;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        director = director;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
-    public String getTrailer() {
-        return trailer;
-    }
-
-    public void setTrailer(String trailer) {
-        this.trailer = trailer;
-    }
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", genre='" + genre + '\'' +
-                ", realise=" + realise +
-                ", Director='" + director + '\'' +
-                ", picture='" + picture + '\'' +
-                ", trailer='" + trailer + '\'' +
-                '}';
-
-    }
-
-}
 
 
