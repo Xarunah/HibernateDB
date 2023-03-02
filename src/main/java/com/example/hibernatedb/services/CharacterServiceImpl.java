@@ -13,13 +13,13 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-    public class CharacterServiceImpl implements CharacterService {
+public class CharacterServiceImpl implements CharacterService {
     private final CharacterRepository characterRepository;
 
     private final CharacterMapper MAPPER = CharacterMapper.INSTANCE;
 
     public CharacterServiceImpl(CharacterRepository characterRepository) {
-            this.characterRepository = characterRepository;
+        this.characterRepository = characterRepository;
     }
 
     @Override
@@ -31,10 +31,10 @@ import java.util.Optional;
     @Override
     public CharacterDTO getCharacter(String characterId) {
         Optional<Character> character = characterRepository.
-        findCharacterById(Integer.parseInt(characterId));
+                findCharacterById(Integer.parseInt(characterId));
         return MAPPER.
-        toCharacterDTO(character.orElseThrow(() ->
-        new HttpServerErrorException(HttpStatus.NOT_FOUND, "Character not found.")));
+                toCharacterDTO(character.orElseThrow(() ->
+                        new HttpServerErrorException(HttpStatus.NOT_FOUND, "Character not found.")));
     }
 
     @Override
@@ -54,24 +54,5 @@ import java.util.Optional;
         return MAPPER.toCharacterDTO(udpatedCharacter);
     }
 
-
-    private Character update(CharacterDTO characterDTO, Character character) {
-        if (characterDTO.getAlias() != null) {
-            character.setAlias(characterDTO.getAlias());
-        }
-
-        if (characterDTO.getName() != null) {
-            character.setName(characterDTO.getName());
-        }
-
-        if (characterDTO.getPicture() != null) {
-            character.setPicture(characterDTO.getPicture());
-        }
-
-        if (characterDTO.getMovies() != null) {
-            character.setMovies(characterDTO.getMovies());
-        }
-        return character;
-    }
 }
 

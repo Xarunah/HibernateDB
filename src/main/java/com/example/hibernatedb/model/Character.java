@@ -1,16 +1,18 @@
 package com.example.hibernatedb.model;
 
+
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
 @Data
 @NoArgsConstructor
-@Entity (name = "Character")
+@Entity(name = "Character")
 @Table(name = "Character")
 public class Character {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO,
+    generator="native")
     @Column(name = "character_id")
     private int id;
 

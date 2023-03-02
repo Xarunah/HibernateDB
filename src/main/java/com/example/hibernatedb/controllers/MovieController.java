@@ -1,7 +1,6 @@
 package com.example.hibernatedb.controllers;
 
 
-import com.example.hibernatedb.dto.CharacterDTO;
 import com.example.hibernatedb.dto.MovieDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +19,6 @@ public interface MovieController {
     ResponseEntity<Void> delete(@PathVariable("movieId") String movieId);
 
     @PatchMapping("/{movieId}")
-    ResponseEntity<CharacterDTO> update(@PathVariable("movieId") String characterId, @RequestBody MovieDTO movieDTO);
+    ResponseEntity<MovieDTO> update(@PathVariable("movieId") String characterId, @RequestBody MovieDTO movieDTO);
 
 }
