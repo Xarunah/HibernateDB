@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
 
-
-/**
- * Controller advice to handle global exceptions.
- * */
+//Controller advice to handle global exceptions.
 @ControllerAdvice
 class CustomControllerAdvice {
 

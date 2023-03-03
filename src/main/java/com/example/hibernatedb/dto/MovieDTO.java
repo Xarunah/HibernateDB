@@ -13,7 +13,6 @@ public class MovieDTO {
     private String genre;
 
     private Integer realise;
-
     private String director;
 
 
@@ -21,7 +20,6 @@ public class MovieDTO {
     private String trailer;
 
     List<CharacterDTO> characters;
-
 
     //this map many movie to one franchise
     private FranchiseDTO franchise;

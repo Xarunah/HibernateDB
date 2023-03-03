@@ -6,33 +6,18 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
-import java.util.List;
-
-/**
- * Mapper for characters
- * */
+//Mapper for characters
 @Mapper
 public interface CharacterMapper {
-    /**
-     * Object to initialise the CharacterMapper when need to access mapper.
-     * */
+//     Object to initialise the CharacterMapper when need to access mapper.
     CharacterMapper INSTANCE = Mappers.getMapper(CharacterMapper.class);
 
-    /**
-     * Converts Character to CharacterDTO Object.
-     * */
+//    Converts Character to CharacterDTO Object.
     CharacterDTO toCharacterDTO(Character character);
 
-
-
-    /**
-     * Converts CharacterDTO to Character Object.
-     * */
+//    Converts CharacterDTO to Character Object.
     Character toCharacter(CharacterDTO characterRequest);
 
-
-    /**
-     * Copy details from CharacterDTO to Character Object.
-     * */
+//    Copy details from CharacterDTO to Character Object.
     Character updatedCharacter(CharacterDTO characterDTO, @MappingTarget Character character);
 }

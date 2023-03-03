@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
-/**
- * Entity for franchise
- * */
+//Entity for franchise
 @Data
 @NoArgsConstructor
 @Entity(name = "franchise")

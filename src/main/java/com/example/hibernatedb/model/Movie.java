@@ -5,10 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.*;
 
-
-/**
- * Entity for movie
- * */
+//Entity for movie
 @Data
 @NoArgsConstructor
 @Entity(name = "Movie")
@@ -63,12 +60,10 @@ public class Movie {
     Set<Character> characters;
     //private Set<Character> characters;
 
-
     //this map many movie to one franchise
     @ManyToOne
     @JoinColumn(name = "franchise_id")
     private Franchise franchise;
-
 
     }
 

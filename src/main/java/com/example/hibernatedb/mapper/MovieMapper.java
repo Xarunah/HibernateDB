@@ -1,10 +1,7 @@
 package com.example.hibernatedb.mapper;
 
-import com.example.hibernatedb.dto.FranchiseDTO;
 import com.example.hibernatedb.dto.MovieDTO;
-import com.example.hibernatedb.model.Franchise;
 import com.example.hibernatedb.model.Movie;
-import com.example.hibernatedb.services.MovieRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
@@ -16,10 +13,7 @@ import java.util.List;
 
 @Mapper
 public interface MovieMapper {
-    /**
-     * Object to initialise the MovieMapper when need to access mapper.
-     * */
-
+//     * Object to initialise the MovieMapper when need to access mapper.
     MovieMapper INSTANCE = Mappers.getMapper(MovieMapper.class);
 
     MovieDTO convert(Movie movie);
@@ -27,7 +21,6 @@ public interface MovieMapper {
     Collection<MovieDTO> convert(List<Movie> all);
 
     Movie convert(MovieDTO movieRequest);
-
 
     Movie update(MovieDTO movieDTO, @MappingTarget Movie movie);
 }

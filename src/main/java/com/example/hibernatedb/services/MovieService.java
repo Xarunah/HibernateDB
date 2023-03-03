@@ -3,7 +3,6 @@ package com.example.hibernatedb.services;
 import com.example.hibernatedb.dto.MovieDTO;
 import org.springframework.stereotype.Service;
 
-//this is done
 @Service
 public interface MovieService {
 

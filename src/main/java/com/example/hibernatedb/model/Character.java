@@ -1,14 +1,10 @@
 package com.example.hibernatedb.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
-/**
- * Entity for characters
- * */
+//Entity for characters
 @Data
 @NoArgsConstructor
 @Entity(name = "Character")
@@ -25,7 +21,6 @@ public class Character {
 
     @Column(length = 30)
     private String alias;
-
 
     private String gender;
 

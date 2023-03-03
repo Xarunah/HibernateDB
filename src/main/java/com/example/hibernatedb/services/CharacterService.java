@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CharacterService  {
 
-
     CharacterDTO createCharacter(CharacterDTO characterDTO);
 
     CharacterDTO getCharacter(String characterId);
@@ -17,8 +16,5 @@ public interface CharacterService  {
     void deleteCharacter(String characterId);
 
     CharacterDTO updateCharacter(String characterId, CharacterDTO characterDTO);
-
-    
-
 
 }

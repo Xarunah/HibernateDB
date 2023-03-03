@@ -5,16 +5,12 @@ import com.example.hibernatedb.model.Franchise;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
-
 import java.util.Collection;
 import java.util.List;
 
 @Mapper
 public  interface FranchiseMapper {
-    /**
-     * Object to initialise the FranchiseMapper when need to access mapper.
-     * */
-
+//    Object to initialise the FranchiseMapper when need to access mapper.
     FranchiseMapper INSTANCE = Mappers.getMapper(FranchiseMapper.class);
 
     FranchiseDTO convert(Franchise franchise);

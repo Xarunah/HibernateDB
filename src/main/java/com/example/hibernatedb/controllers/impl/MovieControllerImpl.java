@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MovieControllerImpl implements MovieController {
     private final MovieService movieService;
-    
-    
+
     @Override
     public ResponseEntity<MovieDTO> create(MovieDTO movieDTO) {
         return ResponseEntity.ok(movieService.createMovie(movieDTO));

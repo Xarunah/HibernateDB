@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
-
 /**
  * Implementation for franchise controller. Controller is responsible for accepting the
  * Http requests from the client and respond them accordingly.
