@@ -7,10 +7,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Implementation for movie controller. Controller is responsible for accepting the 
+ * Http requests from the client and respond them accordingly. 
+ * */
 @RequiredArgsConstructor
 @RestController
 public class MovieControllerImpl implements MovieController {
     private final MovieService movieService;
+    
+    
     @Override
     public ResponseEntity<MovieDTO> create(MovieDTO movieDTO) {
         return ResponseEntity.ok(movieService.createMovie(movieDTO));

@@ -18,7 +18,14 @@ public interface MovieController {
     @DeleteMapping("/{movieId}")
     ResponseEntity<Void> delete(@PathVariable("movieId") String movieId);
 
+    /**
+     * Update movie by movie id and by passing updating DTO.
+     *
+     * @param movieId the franchise id
+     * @param franchiseDTO the franchise DTO
+     * @return MovieDTO franchise details against the provided id
+     * */
     @PatchMapping("/{movieId}")
-    ResponseEntity<MovieDTO> update(@PathVariable("movieId") String characterId, @RequestBody MovieDTO movieDTO);
+    ResponseEntity<MovieDTO> update(@PathVariable("movieId") String movieId, @RequestBody MovieDTO movieDTO);
 
 }

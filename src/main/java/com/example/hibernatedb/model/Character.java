@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
+/**
+ * Entity for characters
+ * */
 @Data
 @NoArgsConstructor
 @Entity(name = "Character")
@@ -29,8 +32,6 @@ public class Character {
     private String picture;
 
     //this means a character can also appear in multiple movies
-//    @ManyToMany
-//    @JoinColumn(name = "movie_id")
     @ManyToMany
     @JoinTable(
             name = "character_movies",

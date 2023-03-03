@@ -12,6 +12,10 @@ import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.Optional;
 
+
+/**
+ * Implementation for movie service.
+ * */
 @Slf4j
 @Service
 @RequiredArgsConstructor

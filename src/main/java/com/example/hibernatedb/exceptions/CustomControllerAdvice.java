@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 
+/**
+ * Controller advice to handle global exceptions.
+ * */
 @ControllerAdvice
 class CustomControllerAdvice {
 
-    // fallback method
+    // fallback method when exception is ResponseStatusException or its child exceptions, and return
+    // Status 404(NOT_FOUND)
     @ExceptionHandler({ResponseStatusException.class}) // exception handled
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ErrorResource> handleResponseStatusException(ResponseStatusException e) {
@@ -22,7 +26,8 @@ class CustomControllerAdvice {
         return new ResponseEntity<>(new ErrorResource(
                         status, e.getReason()), status);
     }
-    // fallback method
+    // fallback method when exception is Exception or its child exceptions, and return
+    // Status 500(INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class) // exception handled
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<ErrorResource> handleExceptions(
