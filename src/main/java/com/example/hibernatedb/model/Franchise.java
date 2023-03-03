@@ -14,7 +14,7 @@ import java.util.Set;
 public class Franchise {
     @Id
     @GeneratedValue(
-            strategy = GenerationType.SEQUENCE
+            strategy = GenerationType.IDENTITY
     )
     @Column(
             name = "franchise_id",
