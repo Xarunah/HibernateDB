@@ -17,4 +17,6 @@ public interface CharacterRepository extends JpaRepository<Character, Integer> {
      * Find Character by id.
      * */
     Optional<Character> findCharacterById(long id);
+
+    Optional<Character> findAllCharacterByid(long id);
 }

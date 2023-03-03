@@ -48,4 +48,7 @@ public interface CharacterController {
     @PatchMapping("/{characterId}")
     ResponseEntity<CharacterDTO> updateCharacter(@PathVariable("characterId") String characterId, @RequestBody CharacterDTO characterDTO);
 
+
+
+
 }

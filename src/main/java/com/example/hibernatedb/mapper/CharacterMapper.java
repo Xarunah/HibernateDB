@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 /**
  * Mapper for characters
  * */
@@ -20,6 +22,8 @@ public interface CharacterMapper {
      * Converts Character to CharacterDTO Object.
      * */
     CharacterDTO toCharacterDTO(Character character);
+
+
 
     /**
      * Converts CharacterDTO to Character Object.

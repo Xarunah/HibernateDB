@@ -30,8 +30,7 @@ public class CharacterServiceImpl implements CharacterService {
 
     @Override
     public CharacterDTO getCharacter(String characterId) {
-        Optional<Character> character = characterRepository.
-                findCharacterById(Integer.parseInt(characterId));
+        Optional<Character> character = characterRepository.findCharacterById(Integer.parseInt(characterId));
         return MAPPER.
                 toCharacterDTO(character.orElseThrow(() ->
                         new HttpServerErrorException(HttpStatus.NOT_FOUND, "Character not found.")));

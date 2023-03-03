@@ -16,8 +16,12 @@ public interface MovieController {
     @PostMapping
     ResponseEntity<MovieDTO> create(@RequestBody MovieDTO movieDTO);
 
+
+
+
     @GetMapping("/{movieId}")
     ResponseEntity<MovieDTO> get(@PathVariable("movieId") String movieId);
+
 
     @DeleteMapping("/{movieId}")
     ResponseEntity<Void> delete(@PathVariable("movieId") String movieId);

@@ -17,4 +17,8 @@ public interface CharacterService  {
     void deleteCharacter(String characterId);
 
     CharacterDTO updateCharacter(String characterId, CharacterDTO characterDTO);
+
+    
+
+
 }
