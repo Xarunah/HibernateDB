@@ -30,6 +30,6 @@ public class Franchise {
     private String description;
 
     //this map one franchise to many movie
-   @OneToMany(mappedBy = "franchise")
+   @OneToMany(targetEntity = Movie.class)
    private Set<Movie> movies;
 }
