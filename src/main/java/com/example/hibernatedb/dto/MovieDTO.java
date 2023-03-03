@@ -2,19 +2,27 @@ package com.example.hibernatedb.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class MovieDTO {
-    public MovieDTO(int id, String name, String alias, String gender, String picture) {
-        this.id = id;
-        this.name = name;
-        this.alias = alias;
-        this.gender = gender;
-        this.picture = picture;
-    }
+    private Long id;
 
-    private int id;
-    private String name;
-    private String alias;
-    private String gender;
+    private String title;
+
+    private String genre;
+
+    private Integer realise;
+
+    private String director;
+
+
     private String picture;
+    private String trailer;
+
+    List<CharacterDTO> characters;
+
+
+    //this map many movie to one franchise
+    private FranchiseDTO franchise;
 }

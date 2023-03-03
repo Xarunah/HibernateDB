@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.*; 
 
 @Data
-public class FrachiseDTO {
+public class FranchiseDTO {
     private Integer id;
     private String name;
     private String description;

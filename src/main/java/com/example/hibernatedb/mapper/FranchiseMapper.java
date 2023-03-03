@@ -1,9 +1,9 @@
 package com.example.hibernatedb.mapper;
 
-import com.example.hibernatedb.dto.FrachiseDTO;
+import com.example.hibernatedb.dto.FranchiseDTO;
 import com.example.hibernatedb.model.Franchise;
-import com.example.hibernatedb.services.FranchiseRequest;
 import org.mapstruct.Mapper;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
 import java.util.Collection;
@@ -11,13 +11,18 @@ import java.util.List;
 
 @Mapper
 public  interface FranchiseMapper {
+    /**
+     * Object to initialise the FranchiseMapper when need to access mapper.
+     * */
 
     FranchiseMapper INSTANCE = Mappers.getMapper(FranchiseMapper.class);
 
-    FrachiseDTO convert(Franchise franchise);
+    FranchiseDTO convert(Franchise franchise);
 
-    Collection<FrachiseDTO> convert(List<Franchise> all);
+    Collection<FranchiseDTO> convert(List<Franchise> all);
 
-    Franchise convert(FranchiseRequest franchiseRequest);
+    Franchise convert(FranchiseDTO franchiseDTO);
+
+    Franchise updatedFranchise(FranchiseDTO franchiseDTO, @MappingTarget Franchise character);
 
 }

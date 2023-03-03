@@ -6,13 +6,17 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
+/**
+ * Entity for characters
+ * */
 @Data
 @NoArgsConstructor
-@Entity (name = "Character")
+@Entity(name = "Character")
 @Table(name = "Character")
 public class Character {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY,
+    generator="native")
     @Column(name = "character_id")
     private int id;
 
@@ -29,8 +33,6 @@ public class Character {
     private String picture;
 
     //this means a character can also appear in multiple movies
-//    @ManyToMany
-//    @JoinColumn(name = "movie_id")
     @ManyToMany
     @JoinTable(
             name = "character_movies",

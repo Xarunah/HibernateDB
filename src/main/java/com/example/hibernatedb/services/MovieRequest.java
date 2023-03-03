@@ -2,11 +2,7 @@ package com.example.hibernatedb.services;
 
 import com.example.hibernatedb.model.Character;
 import com.example.hibernatedb.model.Franchise;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

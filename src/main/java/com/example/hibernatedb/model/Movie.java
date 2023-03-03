@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.*;
 
+
+/**
+ * Entity for movie
+ * */
 @Data
 @NoArgsConstructor
 @Entity(name = "Movie")
@@ -14,7 +18,7 @@ import java.util.*;
 public class Movie {
     @Id
     @GeneratedValue(
-            strategy = GenerationType.AUTO
+            strategy = GenerationType.IDENTITY
     )
     @Column(
             name = "movie_id",

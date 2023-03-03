@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.util.Set;
 
+/**
+ * Entity for franchise
+ * */
 @Data
 @NoArgsConstructor
 @Entity(name = "franchise")
@@ -11,7 +14,7 @@ import java.util.Set;
 public class Franchise {
     @Id
     @GeneratedValue(
-            strategy = GenerationType.AUTO
+            strategy = GenerationType.IDENTITY
     )
     @Column(
             name = "franchise_id",
@@ -30,6 +33,6 @@ public class Franchise {
     private String description;
 
     //this map one franchise to many movie
-   @OneToMany(mappedBy = "franchise")
+   @OneToMany(targetEntity = Movie.class)
    private Set<Movie> movies;
 }

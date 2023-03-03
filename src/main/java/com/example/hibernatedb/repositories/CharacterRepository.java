@@ -6,9 +6,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+
+/**
+ * Repository to apply CRUD operations on Characters.
+ * */
 @Repository
 public interface CharacterRepository extends JpaRepository<Character, Integer> {
+
+    /**
+     * Find Character by id.
+     * */
     Optional<Character> findCharacterById(long id);
 
-    void deleteCharacterById(int id);
+    Optional<Character> findAllCharacterByid(long id);
 }
