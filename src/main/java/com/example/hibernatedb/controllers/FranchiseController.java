@@ -46,4 +46,6 @@ public interface FranchiseController {
      * */
     @PatchMapping("/{franchiseId}")
     ResponseEntity<FranchiseDTO> updateFranchise(@PathVariable("franchiseId") String franchiseId, @RequestBody FranchiseDTO franchiseDTO);
+
+
 }
