@@ -5,6 +5,10 @@ import com.example.hibernatedb.dto.MovieDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Controller for creating, updating, retrieving and delete the Franchise.
+ * */
+
 @RestController
 @RequestMapping("/api/movie")
 public interface MovieController {

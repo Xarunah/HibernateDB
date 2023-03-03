@@ -16,6 +16,9 @@ import java.util.List;
 
 @Mapper
 public interface MovieMapper {
+    /**
+     * Object to initialise the MovieMapper when need to access mapper.
+     * */
 
     MovieMapper INSTANCE = Mappers.getMapper(MovieMapper.class);
 

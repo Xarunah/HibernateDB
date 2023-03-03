@@ -8,6 +8,10 @@ import org.springframework.http.ResponseEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Implementation for character controller. Controller is responsible for accepting the
+ * Http requests from the client and respond them accordingly.
+ * */
 @RequiredArgsConstructor
 @RestController
 public class CharacterControllerImpl implements CharacterController {

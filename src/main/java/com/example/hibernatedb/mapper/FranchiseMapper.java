@@ -11,6 +11,9 @@ import java.util.List;
 
 @Mapper
 public  interface FranchiseMapper {
+    /**
+     * Object to initialise the FranchiseMapper when need to access mapper.
+     * */
 
     FranchiseMapper INSTANCE = Mappers.getMapper(FranchiseMapper.class);
 
